@@ -1,0 +1,58 @@
+@use "../../assets/css/color_variables" as color_variables;
+
+.header {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  top: 0;
+  padding: 0px 64px;
+  height: 68px;
+  background: linear-gradient(
+    to right,
+    rgba(8, 14, 76, 1),
+    rgba(2, 44, 218, 1)
+  );
+
+  .brand {
+    line-height: 36px;
+    white-space: nowrap;
+  }
+
+  .menu-items-wrapper {
+    display: flex;
+    align-items: center;
+    height: 68px;
+    margin-left: 40px;
+    justify-content: space-between;
+
+    .user-img {
+      display: flex;
+      align-items: center;
+
+       &:hover {
+         cursor: pointer;
+       }
+    }
+
+    .header-menu {
+      display: flex;
+      padding: 0px;
+      height: 68px;
+
+      .menu-item {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        padding: 0px 24px;
+        line-height: 24px;
+
+        &:hover {
+          cursor: pointer;
+          background-color: color_variables.$persian-blue;
+        }
+      }
+    }
+  }
+}
